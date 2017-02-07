@@ -1,0 +1,89 @@
+@import "buttons";
+@import "../colors";
+@import "iconfont.css";
+@import "fontface.css";
+
+html, body {
+  overflow: hidden;
+}
+
+html, body, .global--app, .global--view {
+  height: 100%;
+  background: @background;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'PingFang SC', 'ProximaNova-Semibold', 'ProximaNova-Regular', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Roboto, Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Jhenghei', sans-serif;
+}
+
+a {
+  background: none;
+  text-decoration: none;
+}
+
+button, input, textarea {
+  outline-color: @highlight;
+  outline-width: thin;
+}
+
+button {
+  padding: 0;
+}
+
+input {
+  padding: 0;
+  background: transparent;
+  border-width: 1px;
+}
+
+.global--app {
+  display: flex;
+}
+
+.global--view {
+  width: e("calc(100% - 230px)");
+}
+
+.global--nav-active {
+  .item {
+    color: #fff;
+    background: @highlight;
+    .text {
+      animation-name: pulse;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    } 
+  }
+}
+
+.global--topbar {
+  height: 44px;
+  margin: 45px 35px 41px;
+}
+
+.global--content {
+  padding-left: 35px;
+  padding-right: 35px;
+  height: e("calc(100% - 58px)");
+  overflow-y: hidden;
+}
+
+.animated {
+  -webkit-animation-duration: 0.7s;
+  -moz-animation-duration: 0.7s;
+}
+
+
+.global--searchbar {
+  float: left;
+  margin-left: 50px;
+  height: 57px;
+  width: 50%;
+  line-height: 57px;
+  .input {
+    padding-left: 20px;
+    width: e("calc(100% - 24px)");
+    outline: none;
+    border: none;
+    background-size: 14px;
+  }
+}
